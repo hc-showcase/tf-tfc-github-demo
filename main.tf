@@ -39,7 +39,7 @@ resource "google_compute_instance" "vm" {
   boot_disk {
     initialize_params {
       image = "ubuntu-2110-impish-v20220505"
-      size  = 12
+      size  = 10
       type  = "pd-ssd"
     }
   }

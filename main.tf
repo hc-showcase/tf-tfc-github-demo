@@ -5,7 +5,7 @@ terraform {
       version = "3.9.0"
     }
   }
-  
+
   cloud {
     organization = "mkaesz-dev"
 

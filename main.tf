@@ -5,6 +5,14 @@ terraform {
       version = "3.9.0"
     }
   }
+  
+  cloud {
+    organization = "mkaesz-dev"
+
+    workspaces {
+      name = "tf-tfc-github-demo"
+    }
+  }
 }
 
 variable "server_port" {

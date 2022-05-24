@@ -1,19 +1,19 @@
 terraform {
   required_providers {
     google = {
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
       version = "3.9.0"
     }
   }
 }
 
 variable "server_port" {
-   description = "The server port"
-   type        = number
+  description = "The server port"
+  type        = number
 }
 
 provider "google" {
-  project     = "msk-pub"
+  project = "msk-pub"
 }
 
 data "google_compute_network" "default" {
@@ -67,7 +67,7 @@ resource "google_compute_firewall" "default" {
     protocol = "tcp"
     ports    = ["${var.server_port}"]
   }
-  
+
   target_tags = ["web"]
 }
 
@@ -78,7 +78,7 @@ resource "google_storage_bucket_access_control" "public_rule" {
 }
 
 resource "google_storage_bucket" "bucket" {
-  name = "static-content-bucket-msk-0815"
+  name     = "static-content-bucket-msk-0815"
   location = "EU"
 }
 

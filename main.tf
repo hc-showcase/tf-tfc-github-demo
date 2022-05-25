@@ -39,7 +39,7 @@ resource "google_compute_instance" "vm" {
   boot_disk {
     initialize_params {
       image = "ubuntu-2110-impish-v20220505"
-      size  = 12
+      size  = 10
       type  = "pd-ssd"
     }
   }
@@ -54,7 +54,7 @@ resource "google_compute_instance" "vm" {
 
   metadata_startup_script = <<EOT
 #!/bin/bash
-echo "Hello, World" > index.html
+echo "Hello, Roche" > index.html
 nohup busybox httpd -f -p ${var.server_port} &
 EOT
 

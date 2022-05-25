@@ -6,13 +6,13 @@ terraform {
     }
   }
 
-    cloud {
-      organization = "mkaesz-dev"
+  cloud {
+    organization = "mkaesz-dev"
 
-      workspaces {
-        name = "github-demo"
-      }
+    workspaces {
+      name = "github-demo"
     }
+  }
 }
 
 variable "server_port" {

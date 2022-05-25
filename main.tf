@@ -7,14 +7,14 @@ terraform {
   }
 
   terraform {
-  cloud {
-    organization = "mkaesz-dev"
+    cloud {
+      organization = "mkaesz-dev"
 
-    workspaces {
-      name = "github-demo"
+      workspaces {
+        name = "github-demo"
+      }
     }
   }
-}
 }
 
 variable "server_port" {
@@ -82,8 +82,8 @@ resource "google_compute_firewall" "default" {
 }
 
 module "bucket" {
-  source  = "app.terraform.io/mkaesz-dev/bucket/gcp"
-  version = "1.0.0"
+  source      = "app.terraform.io/mkaesz-dev/bucket/gcp"
+  version     = "1.0.0"
   bucket_name = "mkaesz-bucket-0987ztgbnkii7zgh"
 }
 

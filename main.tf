@@ -6,7 +6,6 @@ terraform {
     }
   }
 
-  terraform {
     cloud {
       organization = "mkaesz-dev"
 
@@ -14,7 +13,6 @@ terraform {
         name = "github-demo"
       }
     }
-  }
 }
 
 variable "server_port" {

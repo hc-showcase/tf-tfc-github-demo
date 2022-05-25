@@ -5,6 +5,16 @@ terraform {
       version = "3.9.0"
     }
   }
+
+  terraform {
+  cloud {
+    organization = "mkaesz-dev"
+
+    workspaces {
+      name = "github-demo"
+    }
+  }
+}
 }
 
 variable "server_port" {
